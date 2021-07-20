@@ -1,0 +1,10 @@
+version: "3"
+services:
+    server:
+        image: node:14-alpine
+        working_dir: /app
+        ports:
+            - "${EXPORT_PORT}:3000"
+        volumes:
+            - ./app:/app
+        command: yarn dev
