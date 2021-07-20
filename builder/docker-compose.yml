@@ -3,8 +3,6 @@ services:
     server:
         image: node:14-alpine
         working_dir: /app
-        env_file:
-            - ../.env
         ports:
             - "${EXPORT_PORT}:3000"
         volumes:

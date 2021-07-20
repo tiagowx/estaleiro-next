@@ -7,7 +7,7 @@ IF EXIST "./app" (
 ) ELSE (
     COPY ../.env .
     ECHO Criando Build
-    cd build
+    cd builder
     docker-compose --env-file ../.env up
     docker-compose down
     cd ..
